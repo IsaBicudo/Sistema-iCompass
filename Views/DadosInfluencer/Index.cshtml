@@ -1,0 +1,47 @@
+﻿@model IEnumerable<iCompass.Models.DadosInfluencer>
+
+@{
+    ViewData["Title"] = "Dados do Influencer";
+}
+
+<h1 class="subtitulo">Dados do Influencer</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Cadastrar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoConteudo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoRedeSocial)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipoConteudo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipoRedeSocial)
+            </td>
+            <td>
+                    <a asp-action="Edit" class="btn-primary" asp-route-id="@item.DadosInfluencerId"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a asp-action="Details" class="btn-primary" asp-route-id="@item.DadosInfluencerId"><i class="fa-solid fa-circle-info"></i></a>
+                    <a asp-action="Delete" class="btn-segundo" asp-route-id="@item.DadosInfluencerId"><i class="fa-solid fa-trash-can"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

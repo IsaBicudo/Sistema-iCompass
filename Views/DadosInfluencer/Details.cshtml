@@ -1,0 +1,36 @@
+﻿@model iCompass.Models.DadosInfluencer
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="subtitulo">Detalhes</h1>
+
+<div>
+    <h4>Dados do Influencer</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Usuario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdUsuario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoConteudo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdTipoConteudo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoRedeSocial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdTipoRedeSocial)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn-primary" asp-route-id="@Model?.DadosInfluencerId"><i class="fa-solid fa-pen-to-square"></i></a>
+    <a asp-action="Index" class="btn-primary">Voltar à Lista</a>
+</div>

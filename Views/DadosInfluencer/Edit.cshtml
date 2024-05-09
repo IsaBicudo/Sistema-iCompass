@@ -1,0 +1,44 @@
+﻿@model iCompass.Models.DadosInfluencer
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1 class="subtitulo">Editar</h1>
+
+<h4>Dados do Influencer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DadosInfluencerId" />
+            <div class="form-group">
+                <label asp-for="IdUsuario" class="control-label">Usuário</label>
+                <input asp-for="IdUsuario" class="form-control" />
+                <span asp-validation-for="IdUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdTipoConteudo" class="control-label">Conteúdo</label>
+                <input asp-for="IdTipoConteudo" class="form-control" />
+                <span asp-validation-for="IdTipoConteudo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoRedeSocial" class="control-label">Rede Social</label>
+                <input asp-for="IdTipoRedeSocial" class="form-control" />
+                <span asp-validation-for="IdTipoRedeSocial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn-primary">Voltar à Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
