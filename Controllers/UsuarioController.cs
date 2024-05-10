@@ -49,9 +49,9 @@ namespace iCompass.Controllers
         // GET: Usuario/Create
         public IActionResult Create()
         {
-            ViewData["PlanoId"] = new SelectList(_context.Plano, "PlanoId", "PlanoId");
-            ViewData["TipoSexoId"] = new SelectList(_context.TipoSexo, "TipoSexoId", "TipoSexoId");
-            ViewData["TipoUsuarioId"] = new SelectList(_context.TipoUsuario, "TipoUsuarioId", "TipoUsuarioId");
+            ViewData["PlanoId"] = new SelectList(_context.Plano, "PlanoId", "NomePlano");
+            ViewData["TipoSexoId"] = new SelectList(_context.TipoSexo, "TipoSexoId", "NomeTipoSexo");
+            ViewData["TipoUsuarioId"] = new SelectList(_context.TipoUsuario, "TipoUsuarioId", "NomeTipoUsuario");
             return View();
         }
 
@@ -68,9 +68,9 @@ namespace iCompass.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PlanoId"] = new SelectList(_context.Plano, "PlanoId", "PlanoId", usuario.PlanoId);
-            ViewData["TipoSexoId"] = new SelectList(_context.TipoSexo, "TipoSexoId", "TipoSexoId", usuario.TipoSexoId);
-            ViewData["TipoUsuarioId"] = new SelectList(_context.TipoUsuario, "TipoUsuarioId", "TipoUsuarioId", usuario.TipoUsuarioId);
+            ViewData["PlanoId"] = new SelectList(_context.Plano, "PlanoId", "NomePlano", usuario.PlanoId);
+            ViewData["TipoSexoId"] = new SelectList(_context.TipoSexo, "TipoSexoId", "NomeTipoSexo", usuario.TipoSexoId);
+            ViewData["TipoUsuarioId"] = new SelectList(_context.TipoUsuario, "TipoUsuarioId", "NomeTipoUsuario", usuario.TipoUsuarioId);
             return View(usuario);
         }
 
@@ -87,9 +87,9 @@ namespace iCompass.Controllers
             {
                 return NotFound();
             }
-            ViewData["PlanoId"] = new SelectList(_context.Plano, "PlanoId", "PlanoId", usuario.PlanoId);
-            ViewData["TipoSexoId"] = new SelectList(_context.TipoSexo, "TipoSexoId", "TipoSexoId", usuario.TipoSexoId);
-            ViewData["TipoUsuarioId"] = new SelectList(_context.TipoUsuario, "TipoUsuarioId", "TipoUsuarioId", usuario.TipoUsuarioId);
+            ViewData["PlanoId"] = new SelectList(_context.Plano, "PlanoId", "NomePlano", usuario.PlanoId);
+            ViewData["TipoSexoId"] = new SelectList(_context.TipoSexo, "TipoSexoId", "NomeTipoSexo", usuario.TipoSexoId);
+            ViewData["TipoUsuarioId"] = new SelectList(_context.TipoUsuario, "TipoUsuarioId", "NomeTipoUsuario", usuario.TipoUsuarioId);
             return View(usuario);
         }
 
@@ -125,9 +125,9 @@ namespace iCompass.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PlanoId"] = new SelectList(_context.Plano, "PlanoId", "PlanoId", usuario.PlanoId);
-            ViewData["TipoSexoId"] = new SelectList(_context.TipoSexo, "TipoSexoId", "TipoSexoId", usuario.TipoSexoId);
-            ViewData["TipoUsuarioId"] = new SelectList(_context.TipoUsuario, "TipoUsuarioId", "TipoUsuarioId", usuario.TipoUsuarioId);
+            ViewData["PlanoId"] = new SelectList(_context.Plano, "PlanoId", "NomePlano", usuario.PlanoId);
+            ViewData["TipoSexoId"] = new SelectList(_context.TipoSexo, "TipoSexoId", "NomeTipoSexo", usuario.TipoSexoId);
+            ViewData["TipoUsuarioId"] = new SelectList(_context.TipoUsuario, "TipoUsuarioId", "NomeTipoUsuario", usuario.TipoUsuarioId);
             return View(usuario);
         }
 

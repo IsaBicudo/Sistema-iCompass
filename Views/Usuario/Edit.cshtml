@@ -1,12 +1,12 @@
 ﻿@model iCompass.Models.Usuario
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Usuario";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
-<h4>Usuario</h4>
+<h4 class="subtitulo">Usuário</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,69 +14,68 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="UsuarioId" />
             <div class="form-group">
-                <label asp-for="NomeUsuario" class="control-label"></label>
+                <label asp-for="NomeUsuario" class="control-label">Usuário</label>
                 <input asp-for="NomeUsuario" class="form-control" />
                 <span asp-validation-for="NomeUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdadeUsuario" class="control-label"></label>
+                <label asp-for="IdadeUsuario" class="control-label">Idade</label>
                 <input asp-for="IdadeUsuario" class="form-control" />
                 <span asp-validation-for="IdadeUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TipoSexoId" class="control-label"></label>
+                <label asp-for="TipoSexoId" class="control-label">Sexo</label>
                 <select asp-for="TipoSexoId" class="form-control" asp-items="ViewBag.TipoSexoId"></select>
                 <span asp-validation-for="TipoSexoId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CpfUsuario" class="control-label"></label>
+                <label asp-for="CpfUsuario" class="control-label">CPF</label>
                 <input asp-for="CpfUsuario" class="form-control" />
                 <span asp-validation-for="CpfUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EnderecoUsuario" class="control-label"></label>
+                <label asp-for="EnderecoUsuario" class="control-label">Endereço</label>
                 <input asp-for="EnderecoUsuario" class="form-control" />
                 <span asp-validation-for="EnderecoUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TelefoneUsuario" class="control-label"></label>
+                <label asp-for="TelefoneUsuario" class="control-label">Telefone</label>
                 <input asp-for="TelefoneUsuario" class="form-control" />
                 <span asp-validation-for="TelefoneUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TipoUsuarioId" class="control-label"></label>
-                <select asp-for="TipoUsuarioId" class="form-control" asp-items="ViewBag.TipoUsuarioId"></select>
-                <span asp-validation-for="TipoUsuarioId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PlanoId" class="control-label"></label>
+                <label asp-for="PlanoId" class="control-label">Planos</label>
                 <select asp-for="PlanoId" class="form-control" asp-items="ViewBag.PlanoId"></select>
                 <span asp-validation-for="PlanoId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EmailUsuario" class="control-label"></label>
+                <label asp-for="EmailUsuario" class="control-label">Email</label>
                 <input asp-for="EmailUsuario" class="form-control" />
                 <span asp-validation-for="EmailUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SenhaUsuario" class="control-label"></label>
+                <label asp-for="TipoUsuarioId" class="control-label">Tipo Usuário</label>
+                <select asp-for="TipoUsuarioId" class="form-control" asp-items="ViewBag.TipoUsuarioId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="SenhaUsuario" class="control-label">Senha</label>
                 <input asp-for="SenhaUsuario" class="form-control" />
                 <span asp-validation-for="SenhaUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ConfirmarSenhaUsuario" class="control-label"></label>
+                <label asp-for="ConfirmarSenhaUsuario" class="control-label">Confirmar Senha</label>
                 <input asp-for="ConfirmarSenhaUsuario" class="form-control" />
                 <span asp-validation-for="ConfirmarSenhaUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn-primary"asp-action="Index">Voltar à Lista</a>
 </div>
 
 @section Scripts {

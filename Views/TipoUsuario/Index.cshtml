@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<iCompass.Models.TipoUsuario>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Tipos de Usuário";
 }
 
-<h1>Index</h1>
+<h1>Tipo de Usuário</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn-primary" asp-action="Create">Cadastrar novo</a>
 </p>
 <table class="table">
     <thead>
@@ -25,9 +25,9 @@
                 @Html.DisplayFor(modelItem => item.NomeTipoUsuario)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.TipoUsuarioId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.TipoUsuarioId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.TipoUsuarioId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.TipoUsuarioId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a asp-action="Details" asp-route-id="@item.TipoUsuarioId" class="btn btn-primary"><i class="fa-solid fa-circle-info"></i></a>
+                    <a asp-action="Delete" asp-route-id="@item.TipoUsuarioId" class="btn btn-segundo"><i class="fa-solid fa-trash-can"></i></a>
             </td>
         </tr>
 }
