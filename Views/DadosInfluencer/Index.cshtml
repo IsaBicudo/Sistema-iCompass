@@ -28,18 +28,18 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.IdUsuario)
+                @Html.DisplayFor(modelItem => item.Usuario.NomeUsuario)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdTipoConteudo)
+                @Html.DisplayFor(modelItem => item.TipoConteudo.NomeTipoConteudo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdTipoRedeSocial)
+                @Html.DisplayFor(modelItem => item.TipoRedeSocial.NomeTipoRedeSocial)
             </td>
             <td>
-                    <a asp-action="Edit" class="btn-primary" asp-route-id="@item.DadosInfluencerId"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a asp-action="Details" class="btn-primary" asp-route-id="@item.DadosInfluencerId"><i class="fa-solid fa-circle-info"></i></a>
-                    <a asp-action="Delete" class="btn-segundo" asp-route-id="@item.DadosInfluencerId"><i class="fa-solid fa-trash-can"></i></a>
+                    <a asp-action="Edit" asp-route-id="@item.DadosInfluencerId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a asp-action="Details" asp-route-id="@item.DadosInfluencerId" class="btn btn-primary"><i class="fa-solid fa-circle-info"></i></a>
+                    <a asp-action="Delete" asp-route-id="@item.DadosInfluencerId" class="btn btn-segundo"><i class="fa-solid fa-trash-can"></i></a>
             </td>
         </tr>
 }

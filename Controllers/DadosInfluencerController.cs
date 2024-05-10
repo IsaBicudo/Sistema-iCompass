@@ -21,9 +21,8 @@ namespace iCompass.Controllers
         // GET: DadosInfluencer
         public async Task<IActionResult> Index()
         {
-              return _context.DadosInfluencer != null ? 
-                          View(await _context.DadosInfluencer.ToListAsync()) :
-                          Problem("Entity set 'Contexto.DadosInfluencer'  is null.");
+            var contexto = _context.DadosInfluencer.Include(d => d.TipoConteudo).Include(d => d.TipoRedeSocial).Include(d => d.Usuario);
+            return View(await contexto.ToListAsync());
         }
 
         // GET: DadosInfluencer/Details/5
@@ -35,6 +34,9 @@ namespace iCompass.Controllers
             }
 
             var dadosInfluencer = await _context.DadosInfluencer
+                .Include(d => d.TipoConteudo)
+                .Include(d => d.TipoRedeSocial)
+                .Include(d => d.Usuario)
                 .FirstOrDefaultAsync(m => m.DadosInfluencerId == id);
             if (dadosInfluencer == null)
             {
@@ -47,6 +49,9 @@ namespace iCompass.Controllers
         // GET: DadosInfluencer/Create
         public IActionResult Create()
         {
+            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "NomeTipoConteudo");
+            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "NomeTipoRedeSocial");
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario");
             return View();
         }
 
@@ -55,7 +60,7 @@ namespace iCompass.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DadosInfluencerId,IdUsuario,IdTipoConteudo,IdTipoRedeSocial")] DadosInfluencer dadosInfluencer)
+        public async Task<IActionResult> Create([Bind("DadosInfluencerId,UsuarioId,TipoConteudoId,TipoRedeSocialId")] DadosInfluencer dadosInfluencer)
         {
             if (ModelState.IsValid)
             {
@@ -63,6 +68,9 @@ namespace iCompass.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "NomeTipoConteudo", dadosInfluencer.TipoConteudoId);
+            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "NomeTipoRedeSocial", dadosInfluencer.TipoRedeSocialId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", dadosInfluencer.UsuarioId);
             return View(dadosInfluencer);
         }
 
@@ -79,6 +87,9 @@ namespace iCompass.Controllers
             {
                 return NotFound();
             }
+            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "NomeTipoConteudo", dadosInfluencer.TipoConteudoId);
+            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "NomeTipoRedeSocial", dadosInfluencer.TipoRedeSocialId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", dadosInfluencer.UsuarioId);
             return View(dadosInfluencer);
         }
 
@@ -87,7 +98,7 @@ namespace iCompass.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("DadosInfluencerId,IdUsuario,IdTipoConteudo,IdTipoRedeSocial")] DadosInfluencer dadosInfluencer)
+        public async Task<IActionResult> Edit(int id, [Bind("DadosInfluencerId,UsuarioId,TipoConteudoId,TipoRedeSocialId")] DadosInfluencer dadosInfluencer)
         {
             if (id != dadosInfluencer.DadosInfluencerId)
             {
@@ -114,6 +125,9 @@ namespace iCompass.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "NomeTipoConteudo", dadosInfluencer.TipoConteudoId);
+            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "NomeTipoRedeSocial", dadosInfluencer.TipoRedeSocialId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", dadosInfluencer.UsuarioId);
             return View(dadosInfluencer);
         }
 
@@ -126,6 +140,9 @@ namespace iCompass.Controllers
             }
 
             var dadosInfluencer = await _context.DadosInfluencer
+                .Include(d => d.TipoConteudo)
+                .Include(d => d.TipoRedeSocial)
+                .Include(d => d.Usuario)
                 .FirstOrDefaultAsync(m => m.DadosInfluencerId == id);
             if (dadosInfluencer == null)
             {
