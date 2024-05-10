@@ -15,7 +15,7 @@ namespace iCompass.Models
         public string NomeTipoConteudo { get; set; } = string.Empty;
 
         [Column("PublicoAlvo")]
-        [Display(Name = "Publico Alvo do Tipo do Conteúdo")]
+        [Display(Name = "Público Alvo ")]
         public string PublicoAlvo { get; set; } = string.Empty;
 
     }
