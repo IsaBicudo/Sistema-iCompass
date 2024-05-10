@@ -1,12 +1,12 @@
 ﻿@model iCompass.Models.Usuario
 
 @{
-    ViewData["Title"] = "Usuario";
+    ViewData["Title"] = "Deletar";
 }
 
-<h1>Deletar</h1>
+<h1 class="subtitulo">Deletar</h1>
 
-<h3 class="subtitulo">Você tem ceteza que gostaria de apagar?</h3>
+<h3 >Você tem ceteza que gostaria de apagar?</h3>
 <div>
     <h4>Usuário</h4>
     <hr />
@@ -75,7 +75,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="UsuarioId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input type="submit" value="Deletar" class="btn btn-danger" /> 
         <a class="btn-primary" asp-action="Index">Voltar à Lista</a>
     </form>
 </div>

@@ -11,32 +11,34 @@ namespace iCompass.Models
         public int UsuarioId { get; set; }
 
         [Column("NomeUsuario")]
-        [Display(Name = "Nome do Usuário")]
+        [Display(Name = "Nome")]
         public string NomeUsuario { get; set; } = string.Empty;
 
         [Column("IdadeUsuario")]
-        [Display(Name = "Idade do Usuário")]
+        [Display(Name = "Idade")]
         public int IdadeUsuario { get; set; }
 
         [ForeignKey("TipoSexoId")]
         public int TipoSexoId { get; set; }
+        [Display(Name = "Sexo")]
 
         public TipoSexo? TipoSexo { get; set; }
 
         [Column("CpfUsuario")]
-        [Display(Name = "Cpf do Usuário")]
+        [Display(Name = "Cpf")]
         public int CpfUsuario { get; set; }
 
         [Column("EnderecoUsuario")]
-        [Display(Name = "Endereço do Usuário")]
+        [Display(Name = "Endereço")]
         public string EnderecoUsuario { get; set; } = string.Empty;
 
         [Column("TelefoneUsuario")]
-        [Display(Name = "Telefone do Usuário")]
+        [Display(Name = "Telefone")]
         public int TelefoneUsuario { get; set; }
 
         [ForeignKey("TipoUsuarioId")]
         public int TipoUsuarioId { get; set; }
+        [Display(Name = "Tipo Usuário")]
 
         public TipoUsuario? TipoUsuario { get; set; }
 
@@ -46,15 +48,15 @@ namespace iCompass.Models
         public Plano? Plano { get; set; }
 
         [Column("EmailUsuario")]
-        [Display(Name = "E-mail do Usuário")]
+        [Display(Name = "E-mail")]
         public string EmailUsuario { get; set; } = string.Empty;
 
         [Column("SenhaUsuario")]
-        [Display(Name = "Senha do Usuário")]
+        [Display(Name = "Senha")]
         public string SenhaUsuario { get; set; } = string.Empty;
 
         [Column("ConfirmarSenhaUsuario")]
-        [Display(Name = "Confirmar Senha do Usuário")]
+        [Display(Name = "Confirmar Senha")]
         public string ConfirmarSenhaUsuario { get; set; } = string.Empty;
     }
 }
