@@ -1,31 +1,31 @@
 ﻿@model iCompass.Models.TipoRedeSocial
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastrar";
 }
 
-<h1>Create</h1>
+<h1 class="subtitulo">Cadastrar</h1>
 
-<h4>TipoRedeSocial</h4>
+<h4>Tipos de Rede Social</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="NomeTipoRedeSocial" class="control-label"></label>
+                <label asp-for="NomeTipoRedeSocial" class="control-label">Rede Social</label>
                 <input asp-for="NomeTipoRedeSocial" class="form-control" />
                 <span asp-validation-for="NomeTipoRedeSocial" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-primary">Voltar à Lista</a>
 </div>
 
 @section Scripts {

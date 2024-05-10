@@ -1,12 +1,12 @@
 ﻿@model iCompass.Models.TipoSexo
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
-<h4>TipoSexo</h4>
+<h4 class="subtitulo">Sexo</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,19 +14,19 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="TipoSexoId" />
             <div class="form-group">
-                <label asp-for="NomeTipoSexo" class="control-label"></label>
+                <label asp-for="NomeTipoSexo" class="control-label">Sexo</label>
                 <input asp-for="NomeTipoSexo" class="form-control" />
                 <span asp-validation-for="NomeTipoSexo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-primary">Voltar à Lista</a>
 </div>
 
 @section Scripts {
