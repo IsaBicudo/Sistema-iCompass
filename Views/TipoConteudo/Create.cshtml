@@ -1,36 +1,36 @@
 ﻿@model iCompass.Models.TipoConteudo
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Tipo Conteúdo";
 }
 
-<h1>Create</h1>
+<h1 class="subtitulo">Cadastrar</h1>
 
-<h4>TipoConteudo</h4>
+<h4>Tipo Conteúdo</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="NomeTipoConteudo" class="control-label"></label>
+                <label asp-for="NomeTipoConteudo" class="control-label">Tipo de Conteúdo</label>
                 <input asp-for="NomeTipoConteudo" class="form-control" />
                 <span asp-validation-for="NomeTipoConteudo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PublicoAlvo" class="control-label"></label>
+                <label asp-for="PublicoAlvo" class="control-label">Público Alvo</label>
                 <input asp-for="PublicoAlvo" class="form-control" />
                 <span asp-validation-for="PublicoAlvo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Cadastrar" class="btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn-primary">Voltar à Lista</a>
 </div>
 
 @section Scripts {

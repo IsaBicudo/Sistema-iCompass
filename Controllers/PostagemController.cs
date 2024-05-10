@@ -49,9 +49,9 @@ namespace iCompass.Controllers
         // GET: Postagem/Create
         public IActionResult Create()
         {
-            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "TipoConteudoId");
-            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "TipoRedeSocialId");
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId");
+            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "NomeTipoConteudo");
+            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "NomeTipoRedeSocial");
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario");
             return View();
         }
 
@@ -68,9 +68,9 @@ namespace iCompass.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "TipoConteudoId", postagem.TipoConteudoId);
-            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "TipoRedeSocialId", postagem.TipoRedeSocialId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId", postagem.UsuarioId);
+            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "NomeTipoConteudo", postagem.TipoConteudoId);
+            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "NomeTipoRedeSocial", postagem.TipoRedeSocialId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", postagem.UsuarioId);
             return View(postagem);
         }
 
@@ -87,9 +87,9 @@ namespace iCompass.Controllers
             {
                 return NotFound();
             }
-            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "TipoConteudoId", postagem.TipoConteudoId);
-            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "TipoRedeSocialId", postagem.TipoRedeSocialId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId", postagem.UsuarioId);
+            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "NomeTipoConteudo", postagem.TipoConteudoId);
+            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "NomeTipoRedeSocial", postagem.TipoRedeSocialId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", postagem.UsuarioId);
             return View(postagem);
         }
 
@@ -125,9 +125,9 @@ namespace iCompass.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "TipoConteudoId", postagem.TipoConteudoId);
-            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "TipoRedeSocialId", postagem.TipoRedeSocialId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId", postagem.UsuarioId);
+            ViewData["TipoConteudoId"] = new SelectList(_context.TipoConteudo, "TipoConteudoId", "NomeTipoConteudo", postagem.TipoConteudoId);
+            ViewData["TipoRedeSocialId"] = new SelectList(_context.TipoRedeSocial, "TipoRedeSocialId", "NomeTipoRedeSocial", postagem.TipoRedeSocialId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", postagem.UsuarioId);
             return View(postagem);
         }
 

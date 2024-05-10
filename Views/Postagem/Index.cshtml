@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<iCompass.Models.Postagem>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Postagem";
 }
 
-<h1>Index</h1>
+<h1 class="subtitulo">Postagem</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn-primary">Cadastrar Novo</a>
 </p>
 <table class="table">
     <thead>
@@ -43,13 +43,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Usuario.UsuarioId)
+                @Html.DisplayFor(modelItem => item.Usuario.NomeUsuario)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TipoRedeSocial.TipoRedeSocialId)
+                @Html.DisplayFor(modelItem => item.TipoRedeSocial.NomeTipoRedeSocial)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TipoConteudo.TipoConteudoId)
+                @Html.DisplayFor(modelItem => item.TipoConteudo.NomeTipoConteudo)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LikePostagem)
@@ -67,9 +67,9 @@
                 @Html.DisplayFor(modelItem => item.QuantidadeComentariosPostagem)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.PostagemId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PostagemId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PostagemId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.PostagemId" class="btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a asp-action="Details" asp-route-id="@item.PostagemId" class="btn-primary"><i class="fa-solid fa-circle-info"></i></a>
+                    <a asp-action="Delete" asp-route-id="@item.PostagemId"class="btn-segundo"><i class="fa-solid fa-trash-can"></i></a>
             </td>
         </tr>
 }

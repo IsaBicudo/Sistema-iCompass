@@ -1,10 +1,10 @@
 ﻿@model iCompass.Models.Postagem
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes";
 }
 
-<h1>Details</h1>
+<h1 class="subtitulo">Detalhes</h1>
 
 <div>
     <h4>Postagem</h4>
@@ -14,19 +14,19 @@
             @Html.DisplayNameFor(model => model.Usuario)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Usuario.UsuarioId)
+            @Html.DisplayFor(model => model.Usuario.NomeUsuario)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.TipoRedeSocial)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoRedeSocial.TipoRedeSocialId)
+            @Html.DisplayFor(model => model.TipoRedeSocial.NomeTipoRedeSocial)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.TipoConteudo)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoConteudo.TipoConteudoId)
+            @Html.DisplayFor(model => model.TipoConteudo.NomeTipoConteudo)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.LikePostagem)
@@ -61,6 +61,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.PostagemId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.PostagemId" class="btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+    <a asp-action="Index" class="btn-primary">Voltar à Lista</a>
 </div>

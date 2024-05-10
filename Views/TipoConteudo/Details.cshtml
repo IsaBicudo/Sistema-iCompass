@@ -1,13 +1,13 @@
 ﻿@model iCompass.Models.TipoConteudo
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes";
 }
 
-<h1>Details</h1>
+<h1 class="subtitulo">Detalhes</h1>
 
 <div>
-    <h4>TipoConteudo</h4>
+    <h4>Tipo Conteudo</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -25,6 +25,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.TipoConteudoId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.TipoConteudoId" class="btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+    <a asp-action="Index" class="btn-primary">Voltar à Lista</a>
 </div>

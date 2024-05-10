@@ -12,37 +12,40 @@ namespace iCompass.Models
 
         [ForeignKey("UsuarioId")]
         public int UsuarioId { get; set; }
+        [Display(Name = "Usuário")]
 
         public Usuario? Usuario { get; set; }
 
         [ForeignKey("TipoRedeSocialId")]
         public int TipoRedeSocialId { get; set; }
+        [Display(Name = "Rede Social")]
 
         public TipoRedeSocial? TipoRedeSocial { get; set; }
 
         [ForeignKey("TipoConteudoId")]
         public int TipoConteudoId { get; set; }
+        [Display(Name = "Conteúdo")]
 
         public TipoConteudo? TipoConteudo { get; set; }
 
         [Column("LikePostagem")]
-        [Display(Name = "Like da Postagem")]
+        [Display(Name = "Likes")]
         public int LikePostagem { get; set; }
 
         [Column("DeslikePostagem")]
-        [Display(Name = "Deslike da Postagem")]
+        [Display(Name = "Deslikes")]
         public int DeslikePostagem { get; set; }
 
         [Column("CompartilhamentoPostagem")]
-        [Display(Name = "Compartilhamento da Postagem")]
+        [Display(Name = "Compartilhamentos")]
         public int CompartilhamentoPostagem { get; set; }
 
         [Column("SalvosPostagem")]
-        [Display(Name = "Salvos da Postagem")]
+        [Display(Name = "Salvos")]
         public int SalvosPostagem { get; set; }
 
         [Column("QuantidadeComentariosPostagem")]
-        [Display(Name = "Quantidades de Comentários da Postagem")]
+        [Display(Name = "Comentários")]
         public int QuantidadeComentariosPostagem { get; set; }
     }
 }
