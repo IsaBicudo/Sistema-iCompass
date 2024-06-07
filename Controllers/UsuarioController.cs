@@ -60,7 +60,7 @@ namespace iCompass.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UsuarioId,NomeUsuario,IdadeUsuario,TipoSexoId,CpfUsuario,EnderecoUsuario,TelefoneUsuario,TipoUsuarioId,PlanoId,EmailUsuario,SenhaUsuario,ConfirmarSenhaUsuario")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("UsuarioId,NomeUsuario,IdadeUsuario,TipoSexoId,CpfUsuario,EnderecoUsuario,TelefoneUsuario,TipoUsuarioId,PlanoId,EmailUsuario,SenhaUsuario,ConfirmarSenhaUsuario,BiografiaUsuario, FotoUsuario")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace iCompass.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UsuarioId,NomeUsuario,IdadeUsuario,TipoSexoId,CpfUsuario,EnderecoUsuario,TelefoneUsuario,TipoUsuarioId,PlanoId,EmailUsuario,SenhaUsuario,ConfirmarSenhaUsuario")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("UsuarioId,NomeUsuario,IdadeUsuario,TipoSexoId,CpfUsuario,EnderecoUsuario,TelefoneUsuario,TipoUsuarioId,PlanoId,EmailUsuario,SenhaUsuario,ConfirmarSenhaUsuario, BiografiaUsuario, FotoUsuario")] Usuario usuario)
         {
             if (id != usuario.UsuarioId)
             {

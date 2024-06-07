@@ -21,6 +21,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.TipoRedeSocial)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosInfluencerSeguidores)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -36,6 +39,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.TipoRedeSocial.NomeTipoRedeSocial)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DadosInfluencerSeguidores)
+                </td>
             <td>
                     <a asp-action="Edit" asp-route-id="@item.DadosInfluencerId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
                     <a asp-action="Details" asp-route-id="@item.DadosInfluencerId" class="btn btn-primary"><i class="fa-solid fa-circle-info"></i></a>

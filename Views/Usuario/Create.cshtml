@@ -65,6 +65,16 @@
                 <span asp-validation-for="ConfirmarSenhaUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="BiografiaUsuario" class="control-label">Biografia</label>
+                <input asp-for="BiografiaUsuario" class="form-control" />
+                <span asp-validation-for="BiografiaUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FotoUsuario" class="control-label">Foto</label>
+                <input asp-for="FotoUsuario" class="form-control" />
+                <span asp-validation-for="FotoUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Cadastrar" class="btn-primary" />
             </div>
         </form>

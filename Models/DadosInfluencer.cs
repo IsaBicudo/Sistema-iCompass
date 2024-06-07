@@ -24,5 +24,9 @@ namespace iCompass.Models
         public int TipoRedeSocialId { get; set; }
         [Display(Name = "Rede Social")]
         public TipoRedeSocial? TipoRedeSocial { get; set; }
+
+        [Column("DadosInfluencerSeguidores")]
+        [Display(Name = "Seguidores")]
+        public string DadosInfluencerSeguidores { get; set; } = string.Empty;
     }
 }

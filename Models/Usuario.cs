@@ -32,6 +32,15 @@ namespace iCompass.Models
         [Display(Name = "Endereço")]
         public string EnderecoUsuario { get; set; } = string.Empty;
 
+        [Column("BiografiaUsuario")]
+        [Display(Name = "Biografia")]
+        public string BiografiaUsuario {get; set; } = string.Empty;
+
+        [Column("FotoUsuario")]
+        [Display(Name = "Foto")]
+        public string FotoUsuario { get; set; } = string.Empty;
+
+
         [Column("TelefoneUsuario")]
         [Display(Name = "Telefone")]
         public int TelefoneUsuario { get; set; }

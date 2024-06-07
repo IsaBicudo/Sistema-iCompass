@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using iCompass.Models;
 
@@ -10,9 +11,11 @@ using iCompass.Models;
 namespace iCompass.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20240607172527_Alteracao2")]
+    partial class Alteracao2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,9 +33,8 @@ namespace iCompass.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DadosInfluencerId"));
 
-                    b.Property<string>("DadosInfluencerSeguidores")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                    b.Property<int>("DadosInfluencerSeguidores")
+                        .HasColumnType("int")
                         .HasColumnName("DadosInfluencerSeguidores");
 
                     b.Property<int>("TipoConteudoId")
