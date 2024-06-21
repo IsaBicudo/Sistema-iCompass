@@ -1,0 +1,32 @@
+﻿@model iCompass.Models.Usuario
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+<body>
+    <div class="big-caixa">
+    <form asp-action="Login">
+        <div class="login-caixa">
+            <img class="logo" src="~/img/LogoGrande.jpg" />
+            <div class="input-field">
+                <label asp-for="EmailUsuario"></label>
+                <input class="input-email" asp-for="EmailUsuario" />
+                <span asp-validation-for="EmailUsuario"></span>
+            </div>
+            <div class="input-field">
+                <label asp-for="SenhaUsuario"></label>
+                <input class="input-email" asp-for="SenhaUsuario" type="password" />
+                <span asp-validation-for="SenhaUsuario"></span>
+            </div>
+            <br />
+            <h4>@ViewBag.Mensagem</h4>
+            <br />
+            <div class="input-field">
+                <input class="btn-big" type="submit" value="Logar" />
+            </div>
+        </div>
+
+    </form>
+</div>
+</body>
+
