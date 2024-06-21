@@ -7,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Contexto>
-    (options => options.UseSqlServer("Data Source=SB-1490633\\SQLSENAI;" +
-    "Initial Catalog = iCompass1;Integrated Security = True;TrustServerCertificate = True"));
+    (options => options.UseSqlServer("Data Source=SB-1490627\\SQLSENAI;" +
+    "Initial Catalog = iCompass;Integrated Security = True;TrustServerCertificate = True"));
 
 var app = builder.Build();
 

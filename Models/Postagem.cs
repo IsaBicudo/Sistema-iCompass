@@ -47,5 +47,9 @@ namespace iCompass.Models
         [Column("QuantidadeComentariosPostagem")]
         [Display(Name = "Comentários")]
         public int QuantidadeComentariosPostagem { get; set; }
+
+        [Column("DataPostagem")]
+        [Display(Name = "Data")]
+        public DateTime DataPostagem { get; set; }
     }
 }
