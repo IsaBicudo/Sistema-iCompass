@@ -89,11 +89,6 @@ namespace iCompass.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("TipoConteudoId,NomeTipoConteudo,PublicoAlvo")] TipoConteudo tipoConteudo)
         {
-            if (id != tipoConteudo.TipoConteudoId)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try

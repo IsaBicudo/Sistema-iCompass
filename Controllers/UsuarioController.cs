@@ -100,11 +100,6 @@ namespace iCompass.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("UsuarioId,NomeUsuario,IdadeUsuario,TipoSexoId,CpfUsuario,EnderecoUsuario,TelefoneUsuario,TipoUsuarioId,PlanoId,EmailUsuario,SenhaUsuario,ConfirmarSenhaUsuario, BiografiaUsuario, FotoUsuario")] Usuario usuario)
         {
-            if (id != usuario.UsuarioId)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try

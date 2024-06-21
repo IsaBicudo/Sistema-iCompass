@@ -89,11 +89,6 @@ namespace iCompass.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("PlanoId,NomePlano,DescricaoPlano,ValorPlano")] Plano plano)
         {
-            if (id != plano.PlanoId)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try

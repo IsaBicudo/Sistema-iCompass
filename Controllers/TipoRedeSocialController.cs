@@ -89,11 +89,6 @@ namespace iCompass.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("TipoRedeSocialId,NomeTipoRedeSocial")] TipoRedeSocial tipoRedeSocial)
         {
-            if (id != tipoRedeSocial.TipoRedeSocialId)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try
