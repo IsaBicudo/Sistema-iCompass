@@ -60,7 +60,7 @@ namespace iCompass.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DadosInfluencerId,UsuarioId,TipoConteudoId,TipoRedeSocialId")] DadosInfluencer dadosInfluencer)
+        public async Task<IActionResult> Create([Bind("DadosInfluencerId,UsuarioId,TipoConteudoId,TipoRedeSocialId,DadosInfluencerSeguidores")] DadosInfluencer dadosInfluencer)
         {
             if (ModelState.IsValid)
             {
