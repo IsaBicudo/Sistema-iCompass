@@ -11,16 +11,15 @@
             <div class="input-field">
                 <label asp-for="EmailUsuario"></label>
                 <input class="input-email" asp-for="EmailUsuario" />
-                <span asp-validation-for="EmailUsuario"></span>
+                    <span style="display:block; float: left" asp-validation-for="EmailUsuario"></span>
             </div>
             <div class="input-field">
                 <label asp-for="SenhaUsuario"></label>
                 <input class="input-email" asp-for="SenhaUsuario" type="password" />
-                <span asp-validation-for="SenhaUsuario"></span>
+                    <span style="display:block; float: left" asp-validation-for="SenhaUsuario"></span>
             </div>
-            <br />
-            <h4>@ViewBag.Mensagem</h4>
-            <br />
+            <h4 class="mensagem">@ViewBag.Mensagem</h4>
+
             <div class="input-field">
                 <input class="btn-big" type="submit" value="Logar" />
             </div>

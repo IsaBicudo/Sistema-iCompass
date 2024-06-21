@@ -13,15 +13,13 @@
     padding: 30px;
     margin-top: 115px;
 }
-
 .logo {
     width: 240px;
     height: 120px;
     object-fit: cover;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px;
 }
-
 label {
     color:white;
     margin-left:20px;
@@ -31,7 +29,6 @@ label {
     text-align: left;
     font-family: Consolas;
 }
-
 .campos input {
     width: 100%;
     height: 40px;
@@ -39,7 +36,6 @@ label {
     border: 0px;
     border-radius: 5px;
 }
-
 .btn-big {
     width: 90%;
     height: 40px;
@@ -53,24 +49,18 @@ label {
     font-family: Verdana;
     font-size:15px;
 }
-
-
-
 .mensagem {
     font-family: Consolas;
+    color: #A076F9;
 }
-
 .input-email {
     width:90%;
     height:35px;
     border-radius:7px;
-    margin-top:5px
-
-
+    margin-bottom: 10px;
 }
-
 .login-caixa {
-    width: 23%;
+    width: 25%;
     height: 450px;
     border: 1px;
     border-style: solid;
@@ -81,7 +71,6 @@ label {
     margin-top:8%;
     border-radius:15px;
 }
-
 .big-caixa {
     width: 100%;
     align-items: center;
