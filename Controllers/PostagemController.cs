@@ -60,7 +60,7 @@ namespace iCompass.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PostagemId,UsuarioId,TipoRedeSocialId,TipoConteudoId,LikePostagem,DeslikePostagem,CompartilhamentoPostagem,SalvosPostagem,QuantidadeComentariosPostagem")] Postagem postagem)
+        public async Task<IActionResult> Create([Bind("PostagemId,UsuarioId,TipoRedeSocialId,TipoConteudoId,LikePostagem,DeslikePostagem,CompartilhamentoPostagem,SalvosPostagem,QuantidadeComentariosPostagem,DataPostagem")] Postagem postagem)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace iCompass.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PostagemId,UsuarioId,TipoRedeSocialId,TipoConteudoId,LikePostagem,DeslikePostagem,CompartilhamentoPostagem,SalvosPostagem,QuantidadeComentariosPostagem")] Postagem postagem)
+        public async Task<IActionResult> Edit(int id, [Bind("PostagemId,UsuarioId,TipoRedeSocialId,TipoConteudoId,LikePostagem,DeslikePostagem,CompartilhamentoPostagem,SalvosPostagem,QuantidadeComentariosPostagem,DataPostagem")] Postagem postagem)
         {
             if (id != postagem.PostagemId)
             {
