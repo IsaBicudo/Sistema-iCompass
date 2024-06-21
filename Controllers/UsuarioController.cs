@@ -175,5 +175,27 @@ namespace iCompass.Controllers
         {
           return (_context.Usuario?.Any(e => e.UsuarioId == id)).GetValueOrDefault();
         }
+        public IActionResult Login(Usuario usuario)
+        {
+            if (usuario.EmailUsuario == "" || usuario.EmailUsuario == null)
+            {
+                return View();
+            }
+            else
+            {
+                var verificaUsuario = _context.Usuario
+                    .Where(x => x.EmailUsuario == usuario.EmailUsuario && x.SenhaUsuario == usuario.SenhaUsuario)
+                    .FirstOrDefault();
+                if (verificaUsuario == null)
+                {
+                    ViewBag.Mensagem = "Usuário ou Senha inválidos!! Tente Novamente.";
+                    return View();
+                }
+                else
+                {
+                    return View("~/Views/Home/Index.cshtml");
+                }
+            }
+        }
     }
 }
