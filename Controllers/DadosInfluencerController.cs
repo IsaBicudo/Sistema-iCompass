@@ -151,13 +151,13 @@ namespace iCompass.Controllers
         // POST: DadosInfluencer/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int DadosInfluencerId)
         {
             if (_context.DadosInfluencer == null)
             {
                 return Problem("Entity set 'Contexto.DadosInfluencer'  is null.");
             }
-            var dadosInfluencer = await _context.DadosInfluencer.FindAsync(id);
+            var dadosInfluencer = await _context.DadosInfluencer.FindAsync(DadosInfluencerId);
             if (dadosInfluencer != null)
             {
                 _context.DadosInfluencer.Remove(dadosInfluencer);

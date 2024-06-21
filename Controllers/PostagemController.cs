@@ -150,13 +150,13 @@ namespace iCompass.Controllers
         // POST: Postagem/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int PostagemId)
         {
             if (_context.Postagem == null)
             {
                 return Problem("Entity set 'Contexto.Postagem'  is null.");
             }
-            var postagem = await _context.Postagem.FindAsync(id);
+            var postagem = await _context.Postagem.FindAsync(PostagemId);
             if (postagem != null)
             {
                 _context.Postagem.Remove(postagem);

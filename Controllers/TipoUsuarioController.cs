@@ -133,13 +133,13 @@ namespace iCompass.Controllers
         // POST: TipoUsuario/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int TipoUsuarioId)
         {
             if (_context.TipoUsuario == null)
             {
                 return Problem("Entity set 'Contexto.TipoUsuario'  is null.");
             }
-            var tipoUsuario = await _context.TipoUsuario.FindAsync(id);
+            var tipoUsuario = await _context.TipoUsuario.FindAsync(TipoUsuarioId);
             if (tipoUsuario != null)
             {
                 _context.TipoUsuario.Remove(tipoUsuario);
